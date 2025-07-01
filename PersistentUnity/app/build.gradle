@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.turbolabo.persistentunity'
+    compileSdk 34 // Or your desired compile SDK version
+
+    defaultConfig {
+        applicationId "com.turbolabo.persistentunity"
+        minSdk 22 // Minimum SDK should be compatible with your plugin (e.g., 21 for NotificationCompat)
+        targetSdk 34 // Target SDK should be the latest stable version
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.13.1' // Ensure this is included for NotificationCompat
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(':persistentnotification')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // IMPORTANT: Add your persistentnotification plugin as a dependency.
+    // Option 1: If you have the .aar file in your 'app/libs' directory:
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    // Option 2: If persistentnotification is a module within the same Android Studio project:
+    // implementation project(':persistentnotification') // Uncomment and use this if it's a module
+}

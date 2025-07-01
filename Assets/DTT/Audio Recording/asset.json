@@ -1,0 +1,8 @@
+{
+    "assetStoreRelease": true,
+    "packageName": "dtt.audio-recording",
+    "version": "1.1.0",
+    "displayName": "Audio Recording",
+    "documentationUrl": "Documentation.pdf",
+    "customIconPath": ""
+}

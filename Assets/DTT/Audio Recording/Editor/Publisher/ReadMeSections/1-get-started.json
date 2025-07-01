@@ -1,0 +1,11 @@
+﻿{
+  "title": "Audio Recording: get started quickly",
+  "text": "[1. Open a new scene in Unity and add a Canvas object. ][2. Open the prefab folder located at ‘Demo/Prefabs/’ and add the Board prefab to the Canvas. All references should be correctly set by default. In case a reference is missing, check the documentation to see how the components are supposed to look.][3. Configure the RecordingSettings ScriptableObject to fit your needs. You can create a new one by right-clicking on the project and selecting ‘Create/DTT/AudioRecording/RecordingSettings’.][4. Then pass it to the MicrophoneUI component. You can learn more about the settings at 4. Editor in the documentation.][Want to dive deeper? Take a look at our documentation:][l]",
+  "links": [
+    {
+      "text": "Open documentation",
+      "url": "Documentation.pdf",
+      "inline": false
+    }
+  ]
+}
