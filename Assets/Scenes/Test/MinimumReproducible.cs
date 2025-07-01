@@ -2,13 +2,17 @@ using Reown.AppKit.Unity;
 using System;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class MinimumReproducible : MonoBehaviour {
     private bool resumed;
     private bool isWalletConnected;
     private AppKitConfig _AppKitConfig;
+    [SerializeField] private Button _connectBtn;
 
     private async void Awake() {
+        _connectBtn.interactable = false;
         _AppKitConfig = new AppKitConfig(
                  projectId: "da8823ff41610d0ab13bc637415f96df",
                  metadata: new Metadata(
@@ -32,6 +36,7 @@ public class MinimumReproducible : MonoBehaviour {
         };
         await Init();
         SetupEvents();
+        _connectBtn.interactable = true;
     }
     void Start() {}
 

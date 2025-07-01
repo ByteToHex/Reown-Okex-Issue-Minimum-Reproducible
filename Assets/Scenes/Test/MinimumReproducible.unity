@@ -2513,6 +2513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07868d0550aa2664399a8df6515a1d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _connectBtn: {fileID: 2253904863492000088}
 --- !u!224 &5383300284591775884
 RectTransform:
   m_ObjectHideFlags: 0
